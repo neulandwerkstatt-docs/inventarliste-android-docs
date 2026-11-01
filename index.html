@@ -26,6 +26,10 @@
       nav {
         margin-bottom: 1rem;
       }
+      code {
+        font-size: 0.9em;
+        overflow-wrap: anywhere;
+      }
     </style>
   </head>
   <body>
@@ -35,12 +39,13 @@
       <a href="impressum.html">Impressum / Legal Notice</a>
     </nav>
 
-    <!-- Keep in sync with privacy.md -->
+    <!-- Keep in sync with privacy.md (generated from it) -->
     <section id="de" lang="de">
       <h2>Deutsch</h2>
-      <p><strong>Stand: 1. November 2026</strong></p>
-
-      <h3>Verantwortlicher</h3>
+      <p>
+        <strong>Stand: 1. November 2026</strong>
+      </p>
+      <h3>1. Verantwortlicher</h3>
       <p>
         neulandwerkstatt<br />
         Stephan Ramke<br />
@@ -48,99 +53,274 @@
         53340 Meckenheim, Deutschland<br />
         <a href="mailto:info@neulandwerkstatt.de">info@neulandwerkstatt.de</a>
       </p>
-
-      <h3>Daten und Nutzung</h3>
+      <h3>2. Kurzfassung</h3>
       <p>
-        Fundfach erhebt, überträgt und speichert keine personenbezogenen Daten
-        auf Servern. Die App benötigt keine Internetverbindung und verwendet
-        kein Tracking, keine Analyse, keine Werbung und kein Konto.
+        Fundfach ist eine Offline-App. Der Entwickler erhält keine Daten aus der
+        App: Es gibt kein Konto, keine Server, kein Tracking, keine Analyse,
+        keine Werbung und keine Absturzberichte. Die veröffentlichte Version
+        fordert die Berechtigung „Internet“ nicht an und baut selbst keine
+        Verbindung zu Servern auf. Alles, was du einträgst, bleibt auf deinem
+        Gerät, bis du es selbst weitergibst.
+      </p>
+      <h3>3. Was die App auf deinem Gerät speichert</h3>
+      <p>Alles, was du eingibst oder auswählst:</p>
+      <ul>
+        <li>
+          Räume, Orte (Regale, Kisten, Ordner …), Gegenstände mit Beschreibung,
+          Menge, Art, Tags, Datumsangaben, Notizen und Fotos,
+        </li>
+        <li>
+          Angaben zum Verkauf (Preis, Plattformen, Datum) und ein
+          Verkaufsarchiv,
+        </li>
+        <li>
+          Angaben zum Verleihen, darunter Namen von Personen und Rückgabedaten,
+        </li>
+        <li>
+          Erinnerungen, Umzugskisten, Etiketten-Einstellungen, Tag-Farben,
+          Währung und weitere Einstellungen,
+        </li>
+        <li>
+          bei Nutzung des geheimen Inventars einen Prüfwert deiner PIN (siehe
+          Abschnitt 5).
+        </li>
+      </ul>
+      <p>
+        Diese Daten liegen ausschließlich im privaten Speicher der App auf
+        deinem Gerät. Sie werden entfernt, wenn du die App deinstallierst oder
+        ihre Daten löschst. Die automatische Android-Datensicherung
+        (Cloud-Backup) ist für die App abgeschaltet.
       </p>
       <p>
-        Alle Inventardaten werden ausschließlich lokal auf dem Gerät
-        gespeichert. Durch Deinstallation der App oder Löschen der App-Daten
-        werden diese Daten entfernt. Die automatische Android-Datensicherung
-        (Cloud-Backup) ist für die App deaktiviert; Daten verlassen das Gerät
-        nur über einen Export.
+        Da ich diese Daten weder erhalte noch verarbeite, findet auf meiner
+        Seite keine Verarbeitung personenbezogener Daten statt. Für Daten, die
+        du selbst einträgst, bist du als Nutzer verantwortlich, insbesondere für
+        Namen und andere Angaben zu anderen Personen („Verliehen an“). Bei rein
+        privater, familiärer Nutzung gilt die Haushaltsausnahme (Art. 2 Abs. 2
+        lit. c DSGVO). Trage bitte nur Daten ein, die du speichern darfst.
       </p>
+      <h3>4. Fotos</h3>
+      <ul>
+        <li>
+          Für Gegenstände und Orte kannst du ein Foto aufnehmen oder aus der
+          Galerie wählen. Dazu startet die App die Kamera-App oder die
+          Fotoauswahl deines Geräts (Android-Systemfunktionen). Die App selbst
+          fordert dafür weder die Kamera- noch die Speicher-Berechtigung an.
+        </li>
+        <li>
+          Das gewählte Foto wird verkleinert (längste Seite etwa 1.280 Pixel)
+          und als JPEG im privaten Speicher der App abgelegt. Zusatzdaten des
+          Originals wie der Aufnahmeort (GPS) und Kameradaten werden dabei nicht
+          übernommen.
+        </li>
+        <li>
+          Fotos werden nicht übertragen und nicht ausgewertet (keine Gesichts-
+          oder Bilderkennung).
+        </li>
+        <li>
+          Fotos können Personen oder andere persönliche Informationen zeigen.
+          Fotografiere bitte keine Personen ohne deren Einverständnis und keine
+          Dokumente, die du nicht speichern darfst.
+        </li>
+        <li>
+          Wenn du ein Foto ersetzt oder entfernst oder den Gegenstand bzw. Ort
+          löschst, wird die Bilddatei gelöscht.
+        </li>
+        <li>
+          In einer Sicherung (Abschnitt 6) sind Fotos nur enthalten, wenn du die
+          ZIP-Sicherung erstellst. In QR-Codes, Teilen-Dateien, PDF-, Excel- und
+          CSV-Listen sind nie Fotos enthalten.
+        </li>
+        <li>
+          Fotos geheimer Gegenstände werden bei gesperrtem Inventar nicht
+          angezeigt. Das ist ein Sichtschutz, keine Verschlüsselung.
+        </li>
+        <li>
+          Das Foto eines Ortes (zum Beispiel eines Regals) bleibt auch bei
+          gesperrtem Inventar sichtbar, weil Orte nicht geheim sein können.
+          Mache deshalb kein Ortsfoto, auf dem geheime Gegenstände zu erkennen
+          sind.
+        </li>
+      </ul>
+      <h3>5. Geheimes Inventar und PIN</h3>
       <p>
-        Ein Export wird nur auf ausdrückliche Aktion des Nutzers erstellt. Die
-        Datei wird in einem Ordner auf dem Gerät gespeichert oder über das
-        Android-Teilen-Menü weitergegeben. Was danach mit der Datei geschieht,
-        liegt beim Nutzer.
+        Du kannst Gegenstände mit einer PIN vor beiläufigem Ansehen verbergen.
+        Die PIN wird nicht im Klartext gespeichert, sondern als Prüfwert (PBKDF2
+        mit SHA-256, zufälliges Salz, 100.000 Durchläufe). Die Daten selbst sind
+        nicht verschlüsselt. Der Schutz verhindert zufälliges Mitlesen, er
+        ersetzt keine Gerätesperre. Geheime Gegenstände sind nur in einer
+        Sicherung enthalten, wenn du entsperrt bist und es ausdrücklich
+        ankreuzt.
       </p>
-
-      <h3>Teilen und Importieren</h3>
+      <h3>6. Wenn du Daten weitergibst</h3>
+      <p>Die App gibt Daten nur auf deine ausdrückliche Aktion weiter:</p>
+      <ul>
+        <li>
+          <strong>Sicherung (JSON oder ZIP):</strong> Räume, Orte, Gegenstände,
+          Arten, deine eigenen Tags, Tag-Farben, Währung, Erinnerungsregeln und
+          das Verkaufsarchiv; bei ZIP auch Fotos. Nicht enthalten sind PIN,
+          Sprache und Darstellung. Die Datei wird in Dokumente/Fundfach
+          gespeichert oder über das Android-Teilen-Menü weitergegeben.
+          Sicherungsdateien sind nicht verschlüsselt.
+        </li>
+        <li>
+          <strong>Listen als CSV, Excel oder PDF:</strong> Namen, Mengen, Orte,
+          Arten, Tags und Datumsangaben; beim PDF zusätzlich Beschreibungen.
+          Geheime Gegenstände nur, wenn du das ausdrücklich wählst.
+        </li>
+        <li>
+          <strong>Etiketten (PDF):</strong> Der QR-Code enthält nur eine
+          Ortskennung (<code>fundfach://place/…</code>), keine Inhalte. Eine
+          Inhaltsliste auf dem Etikett erscheint nur, wenn du sie einschaltest;
+          bedenke, dass ein gedrucktes Etikett von anderen gelesen werden kann.
+          Geheime Gegenstände stehen nur darauf, wenn du entsperrt bist und sie
+          ausdrücklich ankreuzt.
+        </li>
+        <li>
+          <strong>Teilen eines Raums oder Ortes (Datei, Code, QR-Code):</strong>
+          Namen, Beschreibungen, Mengen, Arten (als Name), Tags und
+          Anschaffungsdaten der Gegenstände sowie Namen und Notizen der Orte und
+          des Raums. Nie geteilt werden Fotos, geheime Gegenstände, Verkaufs-
+          und Verleihangaben und der Ortsverlauf.
+        </li>
+        <li>
+          <strong>Importieren:</strong> Dateien, Codes und QR-Codes werden
+          geprüft und als neue Einträge angelegt, bestehende Daten werden nicht
+          überschrieben.
+        </li>
+      </ul>
       <p>
-        Fundfach kann einen Raum oder einen Ort mit den zugehörigen Gegenständen
-        als Datei, als Code oder als QR-Code weitergeben und solche Daten
-        importieren. Das geschieht nur auf deine ausdrückliche Aktion. Geteilt
-        werden Namen, Beschreibungen, Mengen, Typen, Schlagwörter und
-        Anschaffungsdaten der Gegenstände sowie Namen und Notizen von Räumen und
-        Orten. Fotos und geheime Gegenstände werden nie geteilt. Ein QR-Code
-        enthält die Daten selbst, keinen Link und keinen Server; große
-        Datenmengen werden auf mehrere QR-Codes verteilt. Ab dem Teilen-Menü
-        entscheidet das Ziel (zum Beispiel Messenger, E-Mail oder
-        Cloud-Speicher), wie die Daten verarbeitet werden. Beim Import werden
-        die Daten geprüft und immer als neue Einträge angelegt; bestehende Daten
-        werden nicht verändert.
+        Ab dem Teilen-Menü entscheidet das Ziel (zum Beispiel Messenger, E-Mail
+        oder Cloud-Speicher), wie die Daten verarbeitet werden; dafür gelten
+        dessen Datenschutzbestimmungen. Auf Android 10 und älter kann eine Datei
+        in Dokumente/Fundfach von anderen Apps gelesen werden, denen du
+        Speicherzugriff gegeben hast. Was nach der Weitergabe geschieht, liegt
+        bei dir.
       </p>
-      <h3>QR-Code-Scanner</h3>
+      <h3>7. Dienste von Google auf deinem Gerät</h3>
+      <ul>
+        <li>
+          <strong>QR-Code-Scanner:</strong> Zum Importieren und zum Öffnen eines
+          Etiketts kannst du einen QR-Code scannen. Dafür nutzt die App den
+          Code-Scanner von Google (Google ML Kit über die Google Play-Dienste).
+          Die App fordert dafür keine Kamera-Berechtigung an und erhält vom
+          Scanner nur den Text des QR-Codes. Kamerabilder werden von der App
+          nicht gespeichert und nicht übertragen. Die Google Play-Dienste können
+          das Scanner-Modul bei Bedarf herunterladen und technische Daten (etwa
+          zu Leistung und Stabilität) an Google übermitteln. Dafür ist Google
+          verantwortlich; es gelten die Datenschutzerklärung von Google und die
+          Hinweise zu ML Kit. Ohne Google Play-Dienste kannst du einen Code
+          stattdessen einfügen oder eine Datei importieren.
+        </li>
+        <li>
+          <strong>Bewertung der App:</strong> Wenn die App dich um eine
+          Bewertung bittet, nutzt sie die In-App-Bewertung von Google Play.
+          Google entscheidet, ob der Dialog erscheint, und zeigt ihn selbst an.
+          Die App erfährt weder, ob du bewertet hast, noch was. Das Bewerten ist
+          freiwillig.
+        </li>
+        <li>
+          <strong>Google Play:</strong> Installation und Updates der App laufen
+          über Google Play. Dabei verarbeitet Google Daten nach seiner eigenen
+          Datenschutzerklärung; ich erhalte daraus keine personenbezogenen
+          Daten.
+        </li>
+      </ul>
+      <h3>8. Erinnerungen und Benachrichtigungen</h3>
       <p>
-        Zum Importieren kannst du einen QR-Code scannen. Dafür nutzt die App den
-        Code-Scanner von Google (Google ML Kit über die Google Play-Dienste).
-        Die App selbst fordert dafür keine Kamera-Berechtigung an und erhält vom
-        Scanner nur den Text des QR-Codes. Kamerabilder werden von der App nicht
-        gespeichert und nicht übertragen.
-      </p>
-      <p>
-        Der Scanner wird von Google bereitgestellt. Die Google Play-Dienste
-        können dabei das Scanner-Modul bei Bedarf herunterladen und technische
-        Daten (zum Beispiel zur Leistung und Stabilität) an Google übermitteln.
-        Dafür ist Google verantwortlich; es gelten die Datenschutzerklärung von
-        Google und die Hinweise zu ML Kit. Ist der Scanner nicht verfügbar (zum
-        Beispiel ohne Google Play-Dienste), kannst du einen Code stattdessen
-        einfügen oder eine Datei importieren.
-      </p>
-      <h3>Bewertung der App</h3>
-      <p>
-        Wenn die App dich um eine Bewertung bittet, nutzt sie die
-        In-App-Bewertung von Google Play. Google entscheidet, ob der Dialog
-        erscheint, und zeigt ihn selbst an. Die App erfährt weder, ob du
-        bewertet hast, noch was. Die Verarbeitung erfolgt durch Google gemäß der
-        Datenschutzerklärung von Google. Das Bewerten ist freiwillig.
-      </p>
-      <h3>Diese Webseite</h3>
-      <p>
-        Diese Datenschutzseite wird über GitHub Pages bereitgestellt. Beim
-        Aufruf kann GitHub technische Daten wie die IP-Adresse verarbeiten. Die
-        App selbst ruft die Seite nicht ab.
-      </p>
-
-      <h3>Berechtigungen</h3>
-      <p>
-        Speicherzugriff wird nur auf Android 10 oder älteren Versionen für den
-        Export angefordert.
-      </p>
-      <p>
-        Benachrichtigungen (Android 13 und neuer): nur, wenn du für eine
-        Erinnerung eine Benachrichtigung einschaltest. Erinnerungen werden auf
+        Erinnerungen (zum Beispiel „Seit 90 Tagen inseriert“, Rückgabetermine
+        oder wiederkehrende Kontrollen) werden lokal aus deinen Daten berechnet.
+        Benachrichtigungen sind freiwillig und standardmäßig aus. Sie werden auf
         dem Gerät geplant und lokal angezeigt; es werden keine Daten übertragen.
-        Das Benachrichtigungs-Plugin fordert zusätzlich die Berechtigung,
-        geplante Erinnerungen nach einem Neustart wiederherzustellen und das
-        Gerät kurz zu wecken. Keine exakten Alarme.
+        Der Text einer Benachrichtigung nennt zum Beispiel den Namen eines
+        Gegenstands oder Ortes und kann auf dem Sperrbildschirm sichtbar sein.
+        Geheime Gegenstände lösen nie eine Benachrichtigung aus.
+      </p>
+      <h3>9. Berechtigungen</h3>
+      <ul>
+        <li>
+          Benachrichtigungen (Android 13 und neuer): nur, wenn du eine
+          Benachrichtigung einschaltest.
+        </li>
+        <li>
+          Neustart-Hinweis und Wecken des Geräts: vom Benachrichtigungs-Baustein
+          verlangt, damit geplante Erinnerungen nach einem Neustart wieder
+          gelten. Es werden keine exakten Alarme verwendet.
+        </li>
+        <li>
+          Speicherzugriff: nur auf Android 10 und älter, um Exportdateien nach
+          Dokumente/Fundfach zu schreiben.
+        </li>
+        <li>
+          Netzwerkstatus: kann vom Scanner-Baustein ergänzt werden; die App
+          verbindet sich damit nicht selbst mit dem Internet.
+        </li>
+        <li>
+          Keine Berechtigung für Kamera, Standort, Kontakte, Mikrofon oder
+          Telefon.
+        </li>
+      </ul>
+      <p>
+        Die App greift nur auf Informationen auf deinem Gerät zu, die für die
+        von dir genutzten Funktionen erforderlich sind (§ 25 Abs. 2 Nr. 2
+        TDDDG).
+      </p>
+      <h3>10. Speicherdauer und Löschung</h3>
+      <p>
+        Die Daten bleiben auf deinem Gerät, bis du sie in der App löschst, die
+        App-Daten löschst oder die App deinstallierst. Sicherungs- und
+        Teilen-Dateien liegen dort, wo du sie gespeichert oder hingeschickt
+        hast; nur du kannst sie löschen.
+      </p>
+      <h3>11. Kinder</h3>
+      <p>
+        Die App richtet sich nicht an Kinder unter 13 Jahren und erhebt keine
+        Daten von ihnen.
+      </p>
+      <h3>12. Deine Rechte</h3>
+      <p>
+        Da ich keine personenbezogenen Daten von dir erhalte oder speichere,
+        kann ich dir dazu keine Auskunft geben und nichts löschen oder
+        berichtigen. Deine Daten kannst du jederzeit selbst in der App ansehen,
+        ändern, löschen und mit der Sicherung in einem gängigen Dateiformat
+        mitnehmen (Datenübertragbarkeit).
       </p>
       <p>
-        Netzwerkstatus: wird vom Scanner-Baustein ergänzt; die App verbindet
-        sich damit nicht selbst mit dem Internet. Keine Kamera-, Standort-,
-        Kontakt- oder Mikrofon-Berechtigung.
+        Du hast nach der DSGVO die Rechte auf Auskunft, Berichtigung, Löschung,
+        Einschränkung der Verarbeitung und Datenübertragbarkeit (Art. 15 bis 20)
+        sowie auf Widerspruch (Art. 21). Du kannst dich außerdem bei einer
+        Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der
+        Landesbeauftragten für Datenschutz und Informationsfreiheit
+        Nordrhein-Westfalen (ldi.nrw.de). Zu Daten, die Google verarbeitet,
+        wende dich an Google. Bei Fragen erreichst du mich unter
+        <a href="mailto:info@neulandwerkstatt.de">info@neulandwerkstatt.de</a>.
+      </p>
+      <h3>13. Diese Webseite</h3>
+      <p>
+        Diese Datenschutzseite wird über GitHub Pages bereitgestellt (GitHub
+        Inc., eine Tochter von Microsoft, USA). Beim Aufruf verarbeitet GitHub
+        technische Daten wie die IP-Adresse und den Zeitpunkt des Zugriffs in
+        Server-Protokollen, um die Seite auszuliefern und abzusichern.
+        Rechtsgrundlage ist das berechtigte Interesse an einer sicheren und
+        stabilen Bereitstellung (Art. 6 Abs. 1 lit. f DSGVO). Die Übermittlung
+        in die USA stützt sich auf die Standardvertragsklauseln und das EU-US
+        Data Privacy Framework von GitHub; Einzelheiten stehen in der
+        Datenschutzerklärung von GitHub. Die App selbst ruft diese Seite nicht
+        ab.
+      </p>
+      <h3>14. Änderungen</h3>
+      <p>
+        Wenn sich die App ändert (zum Beispiel durch neue Funktionen), passe ich
+        diese Erklärung an. Das Datum oben nennt den aktuellen Stand.
       </p>
     </section>
 
     <section id="en" lang="en">
       <h2>English</h2>
-      <p><strong>Last updated: November 1, 2026</strong></p>
-
-      <h3>Controller</h3>
+      <p>
+        <strong>Last updated: November 1, 2026</strong>
+      </p>
+      <h3>1. Controller</h3>
       <p>
         neulandwerkstatt<br />
         Stephan Ramke<br />
@@ -148,82 +328,242 @@
         53340 Meckenheim, Germany<br />
         <a href="mailto:info@neulandwerkstatt.de">info@neulandwerkstatt.de</a>
       </p>
-
-      <h3>Data and app usage</h3>
+      <h3>2. In short</h3>
       <p>
-        Fundfach does not collect, transmit, or store personal data on servers.
-        The app does not require an internet connection and uses no tracking,
-        analytics, advertising, or account.
+        Fundfach is an offline app. The developer receives no data from the app:
+        there is no account, no server, no tracking, no analytics, no
+        advertising and no crash reporting. The published version does not
+        request the "Internet" permission and does not connect to servers
+        itself. Everything you enter stays on your device until you pass it on
+        yourself.
+      </p>
+      <h3>3. What the app stores on your device</h3>
+      <p>Everything you enter or choose:</p>
+      <ul>
+        <li>
+          rooms, places (shelves, boxes, binders …), items with description,
+          quantity, type, tags, dates, notes and photos,
+        </li>
+        <li>sale details (price, platforms, date) and a sales archive,</li>
+        <li>lending details, including names of people and return dates,</li>
+        <li>
+          reminders, moving boxes, label settings, tag colors, currency and
+          other settings,
+        </li>
+        <li>
+          if you use the secret inventory, a check value of your PIN (see
+          section 5).
+        </li>
+      </ul>
+      <p>
+        This data lives only in the app's private storage on your device. It is
+        removed when you uninstall the app or clear its data. Android's
+        automatic cloud backup is turned off for the app.
       </p>
       <p>
-        All inventory data is stored only on the device. Uninstalling the app or
-        deleting its app data removes that data. Android's automatic cloud
-        backup is disabled for the app; data leaves the device only through an
-        export.
+        Because I neither receive nor process this data, no processing of
+        personal data takes place on my side. For data you enter yourself, you
+        are responsible as the user, in particular for names and other details
+        about other people ("lent to"). For purely private, household use, the
+        household exemption applies (Art. 2(2)(c) GDPR). Please enter only data
+        you are allowed to store.
+      </p>
+      <h3>4. Photos</h3>
+      <ul>
+        <li>
+          For items and places you can take a photo or pick one from the
+          gallery. For this the app starts your device's camera app or photo
+          picker (Android system functions). The app itself requests neither the
+          camera nor the storage permission.
+        </li>
+        <li>
+          The chosen photo is scaled down (longest side about 1,280 pixels) and
+          saved as a JPEG in the app's private storage. Additional data of the
+          original such as the location (GPS) and camera data is not kept.
+        </li>
+        <li>
+          Photos are not transmitted and not analyzed (no face or image
+          recognition).
+        </li>
+        <li>
+          Photos can show people or other personal information. Please do not
+          photograph people without their consent or documents you may not
+          store.
+        </li>
+        <li>
+          If you replace or remove a photo, or delete the item or place, the
+          image file is deleted.
+        </li>
+        <li>
+          A backup (section 6) contains photos only if you create the ZIP
+          backup. Photos are never part of QR codes, share files, or PDF, Excel
+          and CSV lists.
+        </li>
+        <li>
+          Photos of secret items are not shown while the inventory is locked.
+          This hides them from view; it is not encryption.
+        </li>
+        <li>
+          The photo of a place (for example a shelf) stays visible while the
+          inventory is locked, because places cannot be secret. So do not take a
+          place photo that shows secret items.
+        </li>
+      </ul>
+      <h3>5. Secret inventory and PIN</h3>
+      <p>
+        You can hide items behind a PIN from casual viewing. The PIN is not
+        stored in plain text but as a check value (PBKDF2 with SHA-256, random
+        salt, 100,000 iterations). The data itself is not encrypted. The
+        protection prevents casual reading; it does not replace the device lock.
+        Secret items are only part of a backup if you are unlocked and tick that
+        explicitly.
+      </p>
+      <h3>6. When you pass data on</h3>
+      <p>The app passes data on only when you explicitly ask it to:</p>
+      <ul>
+        <li>
+          <strong>Backup (JSON or ZIP):</strong> rooms, places, items, types,
+          your own tags, tag colors, currency, reminder rules and the sales
+          archive; a ZIP also contains photos. PIN, language and appearance are
+          not included. The file is saved in Documents/Fundfach or handed to
+          Android's share menu. Backup files are not encrypted.
+        </li>
+        <li>
+          <strong>Lists as CSV, Excel or PDF:</strong> names, quantities,
+          places, types, tags and dates; the PDF also contains descriptions.
+          Secret items only if you explicitly choose so.
+        </li>
+        <li>
+          <strong>Labels (PDF):</strong> the QR code contains only a place
+          identifier (<code>fundfach://place/…</code>), no content. A content
+          list on the label appears only if you turn it on; keep in mind that a
+          printed label can be read by others. Secret items appear on it only if
+          you are unlocked and tick them explicitly.
+        </li>
+        <li>
+          <strong>Sharing a room or place (file, code, QR code):</strong> names,
+          descriptions, quantities, types (as names), tags and acquisition dates
+          of the items, plus names and notes of the places and the room. Never
+          shared: photos, secret items, sale and lending details and the place
+          history.
+        </li>
+        <li>
+          <strong>Importing:</strong> files, codes and QR codes are checked and
+          added as new entries; existing data is not overwritten.
+        </li>
+      </ul>
+      <p>
+        From the share menu on, the destination (for example a messenger, email
+        or cloud storage) decides how the data is processed; its privacy terms
+        apply. On Android 10 and older a file in Documents/Fundfach can be read
+        by other apps you have given storage access. What happens after you pass
+        data on is up to you.
+      </p>
+      <h3>7. Google services on your device</h3>
+      <ul>
+        <li>
+          <strong>QR code scanner:</strong> to import or to open a label you can
+          scan a QR code. The app uses Google's code scanner for this (Google ML
+          Kit through Google Play services). The app requests no camera
+          permission and receives only the text of the QR code from the scanner.
+          The app neither stores nor transmits camera images. Google Play
+          services may download the scanner module when needed and send
+          technical data (for example about performance and stability) to
+          Google. Google is responsible for this; Google's privacy policy and
+          the ML Kit notes apply. Without Google Play services you can paste a
+          code or import a file instead.
+        </li>
+        <li>
+          <strong>Rating the app:</strong> when the app asks you for a rating,
+          it uses Google Play's in-app review. Google decides whether the dialog
+          appears and shows it itself. The app learns neither whether you rated
+          nor what you wrote. Rating is voluntary.
+        </li>
+        <li>
+          <strong>Google Play:</strong> the app is installed and updated through
+          Google Play. Google processes data there under its own privacy policy;
+          I receive no personal data from it.
+        </li>
+      </ul>
+      <h3>8. Reminders and notifications</h3>
+      <p>
+        Reminders (for example "listed for 90 days", return dates or recurring
+        checks) are calculated locally from your data. Notifications are
+        voluntary and off by default. They are scheduled on the device and shown
+        locally; no data is transmitted. The text of a notification names, for
+        example, an item or place and may be visible on the lock screen. Secret
+        items never trigger a notification.
+      </p>
+      <h3>9. Permissions</h3>
+      <ul>
+        <li>
+          Notifications (Android 13 and newer): only when you turn on a
+          notification.
+        </li>
+        <li>
+          Restart notice and waking the device: required by the notification
+          component so that scheduled reminders apply again after a restart. No
+          exact alarms are used.
+        </li>
+        <li>
+          Storage access: only on Android 10 and older, to write export files to
+          Documents/Fundfach.
+        </li>
+        <li>
+          Network state: may be added by the scanner component; the app does not
+          use it to connect to the internet itself.
+        </li>
+        <li>
+          No permission for camera, location, contacts, microphone or phone.
+        </li>
+      </ul>
+      <p>
+        The app accesses only information on your device that is needed for the
+        functions you use (§ 25(2) no. 2 TDDDG).
+      </p>
+      <h3>10. Retention and deletion</h3>
+      <p>
+        The data stays on your device until you delete it in the app, clear the
+        app data or uninstall the app. Backup and share files stay wherever you
+        saved or sent them; only you can delete them.
+      </p>
+      <h3>11. Children</h3>
+      <p>
+        The app is not aimed at children under 13 and collects no data from
+        them.
+      </p>
+      <h3>12. Your rights</h3>
+      <p>
+        Because I do not receive or store personal data from you, I cannot give
+        you information about it or delete or correct anything. You can view,
+        change and delete your data in the app at any time and take it with you
+        using the backup in a common file format (data portability).
       </p>
       <p>
-        An export is created only at the user's explicit request. The file is
-        saved in a folder on the device or shared through Android's share menu.
-        What happens to the file afterwards is up to the user.
+        Under the GDPR you have the rights of access, rectification, erasure,
+        restriction of processing and data portability (Art. 15 to 20) and the
+        right to object (Art. 21). You can also complain to a data protection
+        supervisory authority, for example the State Commissioner for Data
+        Protection and Freedom of Information of North Rhine-Westphalia
+        (ldi.nrw.de). For data that Google processes, please contact Google. For
+        questions you can reach me at
+        <a href="mailto:info@neulandwerkstatt.de">info@neulandwerkstatt.de</a>.
       </p>
-
-      <h3>Sharing and importing</h3>
+      <h3>13. This website</h3>
       <p>
-        Fundfach can pass on a room or a place with its items as a file, a code
-        or a QR code, and import such data. This happens only at your explicit
-        request. What is shared: names, descriptions, quantities, types, tags
-        and acquisition dates of the items, plus names and notes of rooms and
-        places. Photos and secret items are never shared. A QR code contains the
-        data itself, not a link and not a server; large amounts of data are
-        split into several QR codes. From the share menu on, the destination
-        (for example a messenger, email or cloud storage) decides how the data
-        is processed. On import the data is checked and always added as new
-        entries; existing data is not changed.
-      </p>
-      <h3>QR code scanner</h3>
-      <p>
-        To import, you can scan a QR code. The app uses Google's code scanner
-        for this (Google ML Kit through Google Play services). The app itself
-        requests no camera permission and receives only the text of the QR code
-        from the scanner. The app neither stores nor transmits camera images.
-      </p>
-      <p>
-        The scanner is provided by Google. Google Play services may download the
-        scanner module when needed and send technical data (for example about
-        performance and stability) to Google. Google is responsible for this;
-        Google's privacy policy and the ML Kit notes apply. If the scanner is
-        not available (for example without Google Play services), you can paste
-        a code or import a file instead.
-      </p>
-      <h3>Rating the app</h3>
-      <p>
-        When the app asks you for a rating, it uses Google Play's in-app review.
-        Google decides whether the dialog appears and shows it itself. The app
-        learns neither whether you rated nor what you wrote. Google processes
-        this under Google's privacy policy. Rating is voluntary.
-      </p>
-      <h3>This website</h3>
-      <p>
-        This privacy page is hosted on GitHub Pages. When you open it, GitHub
-        may process technical data such as your IP address. The app itself does
+        This privacy page is hosted on GitHub Pages (GitHub Inc., a Microsoft
+        subsidiary, USA). When you open it, GitHub processes technical data such
+        as your IP address and the time of access in server logs to deliver and
+        secure the page. The legal basis is the legitimate interest in secure
+        and stable delivery (Art. 6(1)(f) GDPR). The transfer to the USA relies
+        on GitHub's standard contractual clauses and the EU-US Data Privacy
+        Framework; details are in GitHub's privacy policy. The app itself does
         not load this page.
       </p>
-
-      <h3>Permissions</h3>
+      <h3>14. Changes</h3>
       <p>
-        Storage access is requested only on Android 10 or earlier for exporting.
-      </p>
-      <p>
-        Notifications (Android 13 and newer): only when you turn on a
-        notification for a reminder. Reminders are scheduled on the device and
-        shown locally; no data is sent. The notification plugin also asks for
-        the permission to restore scheduled reminders after a restart and to
-        wake the device briefly. No exact alarms.
-      </p>
-      <p>
-        Network status: added by the scanner component; the app does not use it
-        to connect to the internet itself. No camera, location, contacts or
-        microphone permission.
+        If the app changes (for example through new features), I will adapt this
+        policy. The date above shows the current version.
       </p>
     </section>
   </body>
