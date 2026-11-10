@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aktenordner verwalten &amp; Umzug organisieren – Fundfach für Android</title>
+    <meta name="description" content="Welche Unterlagen liegen in welchem Ordner? Fundfach merkt es sich: Dokumente namentlich erfassen, Ordner und Umzugskartons mit QR-Code etikettieren und ausdrucken. Offline, ohne Cloud, ohne KI." />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://neulandwerkstatt-docs.github.io/inventarliste-android-docs/fundfach.html" />
+    <meta name="theme-color" content="#c9a66b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="neulandwerkstatt" />
+    <meta property="og:title" content="Aktenordner verwalten &amp; Umzug organisieren – Fundfach" />
+    <meta property="og:description" content="Dokumente namentlich erfassen, Ordner und Kartons per QR-Code etikettieren. Offline, ohne Cloud, ohne KI." />
+    <meta property="og:url" content="https://neulandwerkstatt-docs.github.io/inventarliste-android-docs/fundfach.html" />
+    <meta name="twitter:card" content="summary" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Fundfach",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Android",
+          "description": "Android-App zum Verwalten von Aktenordnern und Umzugskartons: Dokumente namentlich hinterlegen, Fotos ergänzen, Ordner per QR-Code etikettieren. Offline, ohne Cloud, ohne KI.",
+          "inLanguage": "de",
+          "isAccessibleForFree": true,
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+          "url": "https://neulandwerkstatt.de/fundfach/",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=de.neulandwerkstatt.fundfach",
+          "author": { "@type": "Organization", "name": "neulandwerkstatt", "url": "https://neulandwerkstatt.de/" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Wie finde ich ein Dokument wieder, das ich irgendwo abgeheftet habe?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Du hinterlegst das Dokument in Fundfach mit seinem Namen und ordnest es dem Aktenordner zu. Die Suche zeigt dir danach sofort, in welchem Ordner es liegt." }
+            },
+            {
+              "@type": "Question",
+              "name": "Kann ich Ordner mit QR-Codes beschriften?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Ja. Für jeden Ordner oder Karton erzeugt Fundfach einen QR-Code. Das Etikett lässt sich als PDF ausdrucken. Scannst du den Code mit Fundfach, siehst du den Inhalt." }
+            },
+            {
+              "@type": "Question",
+              "name": "Werden meine Unterlagen in eine Cloud hochgeladen?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Nein. Fundfach nutzt keine Cloud und keine KI. Die Daten bleiben auf deinem Gerät. Sicherungen legst du selbst an und speicherst sie, wo du möchtest." }
+            },
+            {
+              "@type": "Question",
+              "name": "Wird in Fundfach der Inhalt meiner Dokumente gespeichert?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Nicht nötig. Du erfasst Dokumente mit Namen und optional einem Foto, zum Beispiel vom Deckblatt. Das Original bleibt im Ordner." }
+            },
+            {
+              "@type": "Question",
+              "name": "Was kostet Fundfach?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Fundfach ist kostenlos und ohne Werbung. Suche, Ordner, QR-Etikett, Fotos und Sicherung sind in der kostenlosen Version enthalten. Für spätere Zusatzfunktionen, etwa Sammeldruck von Etiketten oder PDF-Listen, ist eine Pro-Version geplant." }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "neulandwerkstatt", "item": "https://neulandwerkstatt.de/" },
+            { "@type": "ListItem", "position": 2, "name": "Fundfach", "item": "https://neulandwerkstatt.de/fundfach/" },
+            { "@type": "ListItem", "position": 3, "name": "Aktenordner und Umzug" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+      :root {
+        --paper: #f4ecdd;
+        --card: #fffaf0;
+        --ink: #2b241b;
+        --muted: #6a5d4a;
+        --kraft: #c9a66b;
+        --kraft-dark: #8a6a35;
+        --accent: #b2432f;
+        --link: #8c2f1d;
+        --line: #dccdb0;
+        --max: 60rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --paper: #1d1913;
+          --card: #272118;
+          --ink: #f0e6d2;
+          --muted: #b3a58b;
+          --kraft: #b8934f;
+          --kraft-dark: #d9b76f;
+          --accent: #e07a62;
+          --link: #f0a58f;
+          --line: #3d3425;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font: 1.0625rem/1.65 Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        color: var(--ink);
+        background: var(--paper);
+      }
+      a { color: var(--link); text-underline-offset: 0.18em; }
+      a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+      .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+      h1, h2, h3, .tag, .btn, nav {
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      h1 { font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1.1; margin: 0.5rem 0 1rem; letter-spacing: -0.02em; }
+      h2 { font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.2; margin: 0 0 1rem; letter-spacing: -0.01em; }
+      h3 { font-size: 1.1rem; margin: 0 0 0.35rem; }
+      p { margin: 0 0 1rem; }
+
+      .topbar { padding: 0.9rem 0; font-size: 0.9rem; }
+      .topbar nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+      .topbar a { color: var(--muted); }
+
+      .hero { padding: 2rem 1.25rem 3rem; }
+      .tag {
+        display: inline-block;
+        background: var(--kraft);
+        color: #2b241b;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.35rem 0.9rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+      .folder {
+        background: var(--card);
+        border: 2px solid var(--kraft);
+        border-radius: 0 0.9rem 0.9rem 0.9rem;
+        padding: clamp(1.25rem, 4vw, 2.5rem);
+        box-shadow: 6px 6px 0 var(--line);
+      }
+      .lead { font-size: 1.2rem; color: var(--muted); max-width: 40rem; }
+      .cta { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 1.4rem;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        text-decoration: none;
+        border: 2px solid var(--accent);
+      }
+      .btn.primary { background: var(--accent); color: #fff; }
+      @media (prefers-color-scheme: dark) { .btn.primary { color: #1d1913; } }
+      .btn.ghost { color: var(--link); }
+      .badges { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; font: 0.85rem system-ui, sans-serif; }
+      .badges li { border: 1px dashed var(--kraft-dark); border-radius: 2rem; padding: 0.2rem 0.8rem; color: var(--muted); }
+
+      section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+
+      .searches { columns: 2 16rem; column-gap: 2rem; list-style: none; padding: 0; margin: 1rem 0; }
+      .searches li { break-inside: avoid; padding: 0.55rem 0 0.55rem 1.6rem; position: relative; border-bottom: 1px dotted var(--line); }
+      .searches li::before { content: "?"; position: absolute; left: 0; top: 0.5rem; font: 700 1rem system-ui, sans-serif; color: var(--accent); }
+
+      .register { width: 100%; border-collapse: collapse; font-family: system-ui, sans-serif; font-size: 0.95rem; background: var(--card); border: 1px solid var(--line); }
+      .register caption { text-align: left; font-size: 0.85rem; color: var(--muted); padding-bottom: 0.4rem; }
+      .register th, .register td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--line); }
+      .register th { background: var(--kraft); color: #2b241b; }
+      .register td:last-child { font-weight: 700; }
+
+      .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+      .card { background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--kraft); border-radius: 0.5rem; padding: 1.1rem 1.2rem; }
+      .card p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+
+      .qr-row { display: grid; gap: 2rem; grid-template-columns: 1fr; align-items: center; }
+      @media (min-width: 46rem) { .qr-row { grid-template-columns: 1fr 14rem; } }
+      .label {
+        background: #fff; color: #111; border: 2px solid #111; border-radius: 0.4rem;
+        padding: 0.8rem; font: 700 0.85rem system-ui, sans-serif; text-align: center; max-width: 14rem;
+        transform: rotate(-2deg);
+      }
+      .label svg { width: 100%; height: auto; display: block; margin-bottom: 0.4rem; }
+
+      ol.steps { padding-left: 1.2rem; }
+      ol.steps li { margin-bottom: 0.6rem; }
+      details { background: var(--card); border: 1px solid var(--line); border-radius: 0.5rem; padding: 0.8rem 1rem; margin-bottom: 0.6rem; }
+      summary { cursor: pointer; font: 700 1rem system-ui, sans-serif; }
+      details p { margin: 0.6rem 0 0; }
+      .related { display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; padding: 0; list-style: none; font-family: system-ui, sans-serif; }
+      footer { padding: 2rem 0 3rem; border-top: 1px solid var(--line); font: 0.9rem system-ui, sans-serif; color: var(--muted); }
+      footer a { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <nav aria-label="Navigation">
+          <a href="https://neulandwerkstatt.de/">neulandwerkstatt</a>
+          <a href="https://neulandwerkstatt.de/fundfach/">Fundfach – Inventarliste für Zuhause</a>
+          <a href="privacy.html">Datenschutz</a>
+          <a href="impressum.html">Impressum</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap hero">
+        <span class="tag">Fundfach · Android</span>
+        <div class="folder">
+          <h1>Aktenordner im Griff: Du weißt immer, wo es abgeheftet ist</h1>
+          <p class="lead">
+            Mietvertrag, Garantie, Versicherungspolice, Steuerbescheid: Im Regal stehen
+            viele Ordner, aber welcher enthält was? Mit
+            <a href="https://neulandwerkstatt.de/fundfach/">Fundfach, der Inventar-App für Zuhause</a>,
+            hinterlegst du wichtige Dokumente mit Namen und siehst auf einen Blick,
+            in welchem Ordner sie liegen. Auch beim Umzug.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="https://play.google.com/store/apps/details?id=de.neulandwerkstatt.fundfach&amp;hl=de&amp;referrer=utm_source%3Dgithub-pages%26utm_medium%3Dlanding%26utm_campaign%3Dfundfach" rel="noopener">Kostenlos bei Google Play</a>
+            <a class="btn ghost" href="https://neulandwerkstatt.de/fundfach/">Alle Funktionen ansehen</a>
+          </div>
+          <ul class="badges" aria-label="Eigenschaften">
+            <li>Offline</li>
+            <li>Keine Cloud</li>
+            <li>Keine KI</li>
+            <li>Keine Werbung</li>
+            <li>Ohne Konto</li>
+          </ul>
+        </div>
+      </div>
+
+      <section aria-labelledby="problem">
+        <div class="wrap">
+          <h2 id="problem">Das nervt bei Papierkram – und wonach du dann suchst</h2>
+          <p>
+            Was man selten braucht, wird irgendwo abgeheftet. Wenn man es dann doch
+            braucht, beginnt das Blättern. Diese Fragen kennen die meisten:
+          </p>
+          <ul class="searches">
+            <li>In welchem Ordner ist der Mietvertrag?</li>
+            <li>Wo habe ich die Garantie und die Rechnung für das Gerät abgeheftet?</li>
+            <li>Welcher Ordner enthält die Versicherungsunterlagen?</li>
+            <li>Wo liegen Zeugnisse, Urkunden und Impfpässe?</li>
+            <li>Wie sortiere ich Unterlagen, ohne alles einzuscannen?</li>
+            <li>Wie behalte ich bei vielen Ordnern den Überblick?</li>
+            <li>Wie beschrifte ich Ordner und Kartons verständlich?</li>
+            <li>Geht das ohne Cloud und ohne dass eine KI meine Papiere liest?</li>
+          </ul>
+          <p>
+            Die Antwort: ein Verzeichnis für deine Ordner, das nur Namen und Ort
+            speichert. Die Papiere selbst bleiben, wo sie sind.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="register">
+        <div class="wrap">
+          <h2 id="register">Dein Ordnerverzeichnis in der Hosentasche</h2>
+          <p>
+            Lege Ordner an, trage die wichtigsten Dokumente namentlich ein und
+            füge bei Bedarf ein Foto hinzu, etwa vom Deckblatt. Danach genügt ein
+            Suchbegriff.
+          </p>
+          <table class="register">
+            <caption>Beispiel: So könnte dein Verzeichnis aussehen</caption>
+            <thead><tr><th scope="col">Dokument</th><th scope="col">Ordner</th></tr></thead>
+            <tbody>
+              <tr><td>Mietvertrag Wohnung</td><td>Ordner „Wohnen“, Regal Büro</td></tr>
+              <tr><td>Haftpflichtversicherung</td><td>Ordner „Versicherungen“</td></tr>
+              <tr><td>Kaufbeleg Waschmaschine</td><td>Ordner „Garantien“</td></tr>
+              <tr><td>Steuerbescheid 2024</td><td>Ordner „Steuer“</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:1rem">
+            Das funktioniert für Aktenordner, Ablagekisten und Schubladen genauso wie
+            für alles, was
+            <a href="https://neulandwerkstatt.de/fundfach/selten-gebraucht/">selten gebraucht wird</a>
+            und trotzdem auffindbar sein soll.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="qr">
+        <div class="wrap">
+          <div class="qr-row">
+            <div>
+              <h2 id="qr">QR-Code aufkleben, scannen, Inhalt sehen</h2>
+              <p>
+                Jeder Ordner und jeder Karton bekommt ein Etikett mit QR-Code.
+                Das Etikett wird als PDF in Originalgröße erzeugt, auch passend für den Ordnerrücken (breit oder schmal). Du druckst es selbst aus. Wenn du den Code mit Fundfach
+                scannst, erscheint sofort der Inhalt, auch wenn der Ordner
+                irgendwo im Keller steht.
+              </p>
+              <ol class="steps">
+                <li>Ordner oder Karton in Fundfach anlegen und die Dokumente eintragen.</li>
+                <li>Etikett erzeugen und ausdrucken.</li>
+                <li>Aufkleben. Später scannen und den Inhalt lesen.</li>
+              </ol>
+            </div>
+            <div class="label" role="img" aria-label="Beispiel-Etikett mit QR-Code für den Ordner Versicherungen">
+              <svg viewBox="0 0 21 21" shape-rendering="crispEdges" aria-hidden="true">
+                <rect width="21" height="21" fill="#fff"/>
+                <g fill="#111">
+                  <path d="M0 0h7v7H0z M1 1v5h5V1z" fill-rule="evenodd"/><rect x="2" y="2" width="3" height="3"/>
+                  <path d="M14 0h7v7h-7z M15 1v5h5V1z" fill-rule="evenodd"/><rect x="16" y="2" width="3" height="3"/>
+                  <path d="M0 14h7v7H0z M1 15v5h5v-5z" fill-rule="evenodd"/><rect x="2" y="16" width="3" height="3"/>
+                  <rect x="8" y="1" width="1" height="2"/><rect x="10" y="0" width="2" height="1"/><rect x="9" y="4" width="3" height="1"/>
+                  <rect x="8" y="8" width="2" height="2"/><rect x="11" y="9" width="1" height="3"/><rect x="13" y="8" width="2" height="1"/>
+                  <rect x="16" y="9" width="3" height="1"/><rect x="19" y="11" width="2" height="2"/><rect x="14" y="11" width="2" height="2"/>
+                  <rect x="8" y="13" width="2" height="1"/><rect x="10" y="15" width="3" height="2"/><rect x="14" y="14" width="1" height="3"/>
+                  <rect x="16" y="16" width="2" height="2"/><rect x="19" y="15" width="2" height="1"/><rect x="8" y="18" width="1" height="3"/>
+                  <rect x="11" y="19" width="3" height="1"/><rect x="16" y="19" width="3" height="2"/><rect x="0" y="8" width="2" height="1"/>
+                  <rect x="3" y="9" width="3" height="1"/><rect x="5" y="11" width="2" height="2"/>
+                </g>
+              </svg>
+              Versicherungen
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="umzug">
+        <div class="wrap">
+          <h2 id="umzug">Umzugshelfer: Kartons packen, ohne später zu suchen</h2>
+          <p>
+            Ein Umzug verwandelt die Wohnung in einen Stapel Kartons. Mit
+            Fundfach weißt du danach, was in welchem Karton steckt. Eine
+            ausführliche Anleitung findest du unter
+            <a href="https://neulandwerkstatt.de/fundfach/umzug/">Umzug planen und Kartons erfassen</a>.
+          </p>
+          <div class="grid">
+            <div class="card">
+              <h3>Vor dem Umzug</h3>
+              <p>Räume und Kartons anlegen, Inhalt eintragen, QR-Etiketten drucken und aufkleben.</p>
+            </div>
+            <div class="card">
+              <h3>Beim Ausladen</h3>
+              <p>Karton scannen, Inhalt prüfen und gleich in den richtigen Raum stellen.</p>
+            </div>
+            <div class="card">
+              <h3>Nach dem Umzug</h3>
+              <p>Wichtige Unterlagen sind sofort gefunden. Für Kisten im Lager hilft der
+                Ratgeber zu <a href="https://neulandwerkstatt.de/fundfach/keller-dachboden-garage/">Keller, Dachboden und Garage</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="privat">
+        <div class="wrap">
+          <h2 id="privat">Sicherung in deiner Hand: ohne Cloud, ohne KI</h2>
+          <p>
+            Gerade Dokumente gehören nicht auf fremde Server. Fundfach arbeitet
+            vollständig offline und wertet nichts mit künstlicher Intelligenz aus. Zum Scannen von QR-Codes nutzt die App den
+            Code-Scanner der Google Play-Dienste; Einzelheiten stehen in der Datenschutzerklärung.
+            Sicherungen legst du manuell an: als ZIP-Datei inklusive Fotos, als JSON-Sicherung
+            oder als CSV-Liste für die Tabellenkalkulation. Du entscheidest, wo du die Datei
+            ablegst. Beim Gerätewechsel stellst du die Sicherung wieder her, und eine Erinnerung
+            hilft beim regelmäßigen Sichern.
+          </p>
+          <p>
+            Wie die App mit Daten umgeht, steht in der
+            <a href="privacy.html">Datenschutzerklärung von Fundfach</a>.
+            Wie du Daten ohne Cloud weitergibst, erklärt die Seite
+            <a href="https://neulandwerkstatt.de/fundfach/teilen/">Teilen ohne Cloud</a>.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="faq">
+        <div class="wrap">
+          <h2 id="faq">Häufige Fragen</h2>
+          <details>
+            <summary>Wie finde ich ein Dokument wieder, das ich irgendwo abgeheftet habe?</summary>
+            <p>Du hinterlegst es in Fundfach mit seinem Namen und ordnest es dem Aktenordner zu. Die Suche zeigt dir danach sofort, in welchem Ordner es liegt.</p>
+          </details>
+          <details>
+            <summary>Kann ich Ordner mit QR-Codes beschriften?</summary>
+            <p>Ja. Für jeden Ordner oder Karton erzeugt Fundfach einen QR-Code. Das Etikett lässt sich als PDF ausdrucken. Scannst du den Code mit Fundfach, siehst du den Inhalt.</p>
+          </details>
+          <details>
+            <summary>Werden meine Unterlagen in eine Cloud hochgeladen?</summary>
+            <p>Nein. Fundfach nutzt keine Cloud und keine KI. Die Daten bleiben auf deinem Gerät. Sicherungen legst du selbst an und speicherst sie, wo du möchtest.</p>
+          </details>
+          <details>
+            <summary>Wird in Fundfach der Inhalt meiner Dokumente gespeichert?</summary>
+            <p>Nicht nötig. Du erfasst Dokumente mit Namen und optional einem Foto, zum Beispiel vom Deckblatt. Das Original bleibt im Ordner.</p>
+          </details>
+          <details>
+            <summary>Was kostet Fundfach?</summary>
+            <p>Fundfach ist kostenlos und ohne Werbung. Suche, Ordner, QR-Etikett, Fotos und Sicherung sind in der kostenlosen Version enthalten. Für spätere Zusatzfunktionen, etwa Sammeldruck von Etiketten oder PDF-Listen, ist eine Pro-Version geplant.</p>
+          </details>
+        </div>
+      </section>
+
+      <section aria-labelledby="mehr">
+        <div class="wrap">
+          <h2 id="mehr">Mehr Ideen für Fundfach</h2>
+          <ul class="related">
+            <li><a href="https://neulandwerkstatt.de/fundfach/umzug/">Umzug organisieren</a></li>
+            <li><a href="https://neulandwerkstatt.de/fundfach/keller-dachboden-garage/">Keller, Dachboden und Garage ordnen</a></li>
+            <li><a href="https://neulandwerkstatt.de/fundfach/selten-gebraucht/">Selten Gebrauchtes wiederfinden</a></li>
+            <li><a href="https://neulandwerkstatt.de/fundfach/verliehen/">Verliehene Sachen im Blick behalten</a></li>
+            <li><a href="https://neulandwerkstatt.de/fundfach/kabel/">Kabel und Zubehör finden</a></li>
+            <li><a href="https://neulandwerkstatt.de/fundfach/teilen/">Teilen ohne Cloud</a></li>
+          </ul>
+          <div class="cta">
+            <a class="btn primary" href="https://play.google.com/store/apps/details?id=de.neulandwerkstatt.fundfach&amp;hl=de&amp;referrer=utm_source%3Dgithub-pages%26utm_medium%3Dlanding%26utm_campaign%3Dfundfach" rel="noopener">Fundfach bei Google Play</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>
+          Eine App von <a href="https://neulandwerkstatt.de/">neulandwerkstatt</a> ·
+          <a href="https://neulandwerkstatt.de/fundfach/">Fundfach</a> ·
+          <a href="impressum.html">Impressum</a> ·
+          <a href="privacy.html">Datenschutz</a>
+        </p>
+        <p>Google Play ist eine Marke von Google LLC.</p>
+      </div>
+    </footer>
+  </body>
+</html>
