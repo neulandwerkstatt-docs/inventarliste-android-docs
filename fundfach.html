@@ -7,7 +7,7 @@
     <meta name="description" content="Welche Unterlagen liegen in welchem Ordner? Fundfach merkt es sich: Dokumente namentlich erfassen, Ordner und Umzugskartons mit QR-Code etikettieren und ausdrucken. Offline, ohne Cloud, ohne KI." />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <link rel="canonical" href="https://neulandwerkstatt-docs.github.io/inventarliste-android-docs/fundfach.html" />
-    <meta name="theme-color" content="#c9a66b" />
+    <meta name="theme-color" content="#0054e9" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:site_name" content="neulandwerkstatt" />
@@ -77,28 +77,31 @@
 
     <style>
       :root {
-        --paper: #f4ecdd;
-        --card: #fffaf0;
-        --ink: #2b241b;
-        --muted: #6a5d4a;
-        --kraft: #c9a66b;
-        --kraft-dark: #8a6a35;
-        --accent: #b2432f;
-        --link: #8c2f1d;
-        --line: #dccdb0;
+        --paper: #f1f5fd;
+        --card: #ffffff;
+        --ink: #131a2e;
+        --muted: #475270;
+        --kraft: #cddcf8;
+        --kraft-dark: #0054e9;
+        --accent: #0054e9;
+        --accent-ink: #ffffff;
+        --yellow: #ffc409;
+        --link: #0047c4;
+        --line: #d3def4;
         --max: 60rem;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --paper: #1d1913;
-          --card: #272118;
-          --ink: #f0e6d2;
-          --muted: #b3a58b;
-          --kraft: #b8934f;
-          --kraft-dark: #d9b76f;
-          --accent: #e07a62;
-          --link: #f0a58f;
-          --line: #3d3425;
+          --paper: #0e1428;
+          --card: #172040;
+          --ink: #e9efff;
+          --muted: #a8b5d6;
+          --kraft: #263566;
+          --kraft-dark: #7fa6ff;
+          --accent: #6b9bff;
+          --accent-ink: #0e1428;
+          --link: #93b5ff;
+          --line: #2a3768;
         }
       }
       * { box-sizing: border-box; }
@@ -127,8 +130,8 @@
       .hero { padding: 2rem 1.25rem 3rem; }
       .tag {
         display: inline-block;
-        background: var(--kraft);
-        color: #2b241b;
+        background: var(--yellow);
+        color: #1a2550;
         font-size: 0.8rem;
         font-weight: 700;
         letter-spacing: 0.06em;
@@ -138,7 +141,7 @@
       }
       .folder {
         background: var(--card);
-        border: 2px solid var(--kraft);
+        border: 2px solid var(--kraft-dark);
         border-radius: 0 0.9rem 0.9rem 0.9rem;
         padding: clamp(1.25rem, 4vw, 2.5rem);
         box-shadow: 6px 6px 0 var(--line);
@@ -153,8 +156,7 @@
         text-decoration: none;
         border: 2px solid var(--accent);
       }
-      .btn.primary { background: var(--accent); color: #fff; }
-      @media (prefers-color-scheme: dark) { .btn.primary { color: #1d1913; } }
+      .btn.primary { background: var(--accent); color: var(--accent-ink); }
       .btn.ghost { color: var(--link); }
       .badges { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; font: 0.85rem system-ui, sans-serif; }
       .badges li { border: 1px dashed var(--kraft-dark); border-radius: 2rem; padding: 0.2rem 0.8rem; color: var(--muted); }
@@ -168,21 +170,26 @@
       .register { width: 100%; border-collapse: collapse; font-family: system-ui, sans-serif; font-size: 0.95rem; background: var(--card); border: 1px solid var(--line); }
       .register caption { text-align: left; font-size: 0.85rem; color: var(--muted); padding-bottom: 0.4rem; }
       .register th, .register td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--line); }
-      .register th { background: var(--kraft); color: #2b241b; }
+      .register th { background: var(--kraft); color: var(--ink); }
       .register td:last-child { font-weight: 700; }
 
       .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
-      .card { background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--kraft); border-radius: 0.5rem; padding: 1.1rem 1.2rem; }
+      .card { background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--accent); border-radius: 0.5rem; padding: 1.1rem 1.2rem; }
       .card p { margin: 0; color: var(--muted); font-size: 0.98rem; }
 
       .qr-row { display: grid; gap: 2rem; grid-template-columns: 1fr; align-items: center; }
       @media (min-width: 46rem) { .qr-row { grid-template-columns: 1fr 14rem; } }
       .label {
-        background: #fff; color: #111; border: 2px solid #111; border-radius: 0.4rem;
-        padding: 0.8rem; font: 700 0.85rem system-ui, sans-serif; text-align: center; max-width: 14rem;
-        transform: rotate(-2deg);
+        background: #fff; color: #131a2e; border: 1px solid #c3cde4; border-radius: 0.6rem;
+        padding: 1rem 1rem 0.9rem; font: 700 1rem system-ui, sans-serif; text-align: center; max-width: 14rem;
+        box-shadow: 0 6px 18px rgba(0, 40, 120, 0.18);
       }
-      .label svg { width: 100%; height: auto; display: block; margin-bottom: 0.4rem; }
+      .label .scan { position: relative; padding: 0.5rem; margin-bottom: 0.6rem; }
+      .label .scan svg { width: 100%; height: auto; display: block; }
+      .label .scan::before, .label .scan::after { content: ""; position: absolute; width: 22%; height: 22%; border: 0 solid #ffc409; }
+      .label .scan::before { top: 0; left: 0; border-width: 4px 0 0 4px; }
+      .label .scan::after { bottom: 0; right: 0; border-width: 0 4px 4px 0; }
+      .label small { display: block; font-weight: 400; color: #475270; font-size: 0.78rem; margin-top: 0.15rem; }
 
       ol.steps { padding-left: 1.2rem; }
       ol.steps li { margin-bottom: 0.6rem; }
@@ -301,22 +308,12 @@
               </ol>
             </div>
             <div class="label" role="img" aria-label="Beispiel-Etikett mit QR-Code für den Ordner Versicherungen">
-              <svg viewBox="0 0 21 21" shape-rendering="crispEdges" aria-hidden="true">
-                <rect width="21" height="21" fill="#fff"/>
-                <g fill="#111">
-                  <path d="M0 0h7v7H0z M1 1v5h5V1z" fill-rule="evenodd"/><rect x="2" y="2" width="3" height="3"/>
-                  <path d="M14 0h7v7h-7z M15 1v5h5V1z" fill-rule="evenodd"/><rect x="16" y="2" width="3" height="3"/>
-                  <path d="M0 14h7v7H0z M1 15v5h5v-5z" fill-rule="evenodd"/><rect x="2" y="16" width="3" height="3"/>
-                  <rect x="8" y="1" width="1" height="2"/><rect x="10" y="0" width="2" height="1"/><rect x="9" y="4" width="3" height="1"/>
-                  <rect x="8" y="8" width="2" height="2"/><rect x="11" y="9" width="1" height="3"/><rect x="13" y="8" width="2" height="1"/>
-                  <rect x="16" y="9" width="3" height="1"/><rect x="19" y="11" width="2" height="2"/><rect x="14" y="11" width="2" height="2"/>
-                  <rect x="8" y="13" width="2" height="1"/><rect x="10" y="15" width="3" height="2"/><rect x="14" y="14" width="1" height="3"/>
-                  <rect x="16" y="16" width="2" height="2"/><rect x="19" y="15" width="2" height="1"/><rect x="8" y="18" width="1" height="3"/>
-                  <rect x="11" y="19" width="3" height="1"/><rect x="16" y="19" width="3" height="2"/><rect x="0" y="8" width="2" height="1"/>
-                  <rect x="3" y="9" width="3" height="1"/><rect x="5" y="11" width="2" height="2"/>
-                </g>
-              </svg>
+              <div class="scan"><svg viewBox="-2 -2 33 33" shape-rendering="crispEdges" aria-hidden="true">
+                <rect x="-2" y="-2" width="33" height="33" fill="#fff"/>
+                <path fill="#0b1226" d="M0 0h7v1h-7zM8 0h1v1h-1zM10 0h2v1h-2zM13 0h1v1h-1zM19 0h2v1h-2zM22 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h6v1h-6zM17 1h2v1h-2zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM9 2h6v1h-6zM16 2h1v1h-1zM19 2h1v1h-1zM22 2h1v1h-1zM24 2h3v1h-3zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h2v1h-2zM12 3h1v1h-1zM17 3h1v1h-1zM22 3h1v1h-1zM24 3h3v1h-3zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM9 4h1v1h-1zM11 4h9v1h-9zM22 4h1v1h-1zM24 4h3v1h-3zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h4v1h-4zM14 5h1v1h-1zM18 5h2v1h-2zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h7v1h-7zM8 7h3v1h-3zM13 7h3v1h-3zM17 7h1v1h-1zM0 8h1v1h-1zM2 8h2v1h-2zM5 8h3v1h-3zM10 8h1v1h-1zM12 8h3v1h-3zM16 8h2v1h-2zM19 8h2v1h-2zM22 8h1v1h-1zM25 8h1v1h-1zM27 8h2v1h-2zM11 9h1v1h-1zM16 9h9v1h-9zM28 9h1v1h-1zM3 10h1v1h-1zM6 10h1v1h-1zM14 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM23 10h1v1h-1zM26 10h2v1h-2zM2 11h4v1h-4zM7 11h1v1h-1zM10 11h5v1h-5zM16 11h1v1h-1zM21 11h4v1h-4zM28 11h1v1h-1zM1 12h1v1h-1zM3 12h2v1h-2zM6 12h2v1h-2zM9 12h1v1h-1zM11 12h1v1h-1zM15 12h1v1h-1zM17 12h1v1h-1zM20 12h1v1h-1zM25 12h2v1h-2zM0 13h3v1h-3zM7 13h4v1h-4zM13 13h1v1h-1zM15 13h3v1h-3zM19 13h1v1h-1zM22 13h1v1h-1zM26 13h3v1h-3zM1 14h1v1h-1zM3 14h2v1h-2zM6 14h2v1h-2zM9 14h4v1h-4zM14 14h1v1h-1zM16 14h1v1h-1zM18 14h4v1h-4zM23 14h1v1h-1zM26 14h3v1h-3zM1 15h2v1h-2zM5 15h1v1h-1zM7 15h1v1h-1zM13 15h1v1h-1zM16 15h1v1h-1zM18 15h2v1h-2zM21 15h4v1h-4zM27 15h1v1h-1zM1 16h1v1h-1zM3 16h2v1h-2zM6 16h1v1h-1zM10 16h2v1h-2zM18 16h4v1h-4zM24 16h2v1h-2zM27 16h1v1h-1zM4 17h2v1h-2zM7 17h7v1h-7zM15 17h1v1h-1zM20 17h1v1h-1zM23 17h1v1h-1zM25 17h3v1h-3zM0 18h1v1h-1zM2 18h5v1h-5zM11 18h2v1h-2zM15 18h1v1h-1zM23 18h2v1h-2zM26 18h1v1h-1zM2 19h2v1h-2zM8 19h2v1h-2zM16 19h5v1h-5zM26 19h1v1h-1zM1 20h1v1h-1zM5 20h3v1h-3zM12 20h2v1h-2zM16 20h2v1h-2zM19 20h8v1h-8zM8 21h1v1h-1zM10 21h2v1h-2zM13 21h2v1h-2zM16 21h5v1h-5zM24 21h5v1h-5zM0 22h7v1h-7zM8 22h1v1h-1zM10 22h1v1h-1zM13 22h1v1h-1zM18 22h3v1h-3zM22 22h1v1h-1zM24 22h2v1h-2zM27 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM8 23h1v1h-1zM10 23h1v1h-1zM15 23h1v1h-1zM18 23h1v1h-1zM20 23h1v1h-1zM24 23h2v1h-2zM27 23h2v1h-2zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM10 24h2v1h-2zM14 24h1v1h-1zM17 24h1v1h-1zM20 24h5v1h-5zM26 24h1v1h-1zM0 25h1v1h-1zM2 25h3v1h-3zM6 25h1v1h-1zM8 25h2v1h-2zM12 25h1v1h-1zM14 25h4v1h-4zM19 25h3v1h-3zM23 25h3v1h-3zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h3v1h-3zM6 26h1v1h-1zM8 26h2v1h-2zM11 26h1v1h-1zM13 26h1v1h-1zM17 26h2v1h-2zM21 26h1v1h-1zM23 26h1v1h-1zM26 26h1v1h-1zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM9 27h1v1h-1zM11 27h1v1h-1zM15 27h2v1h-2zM18 27h1v1h-1zM20 27h1v1h-1zM25 27h1v1h-1zM27 27h1v1h-1zM0 28h7v1h-7zM8 28h2v1h-2zM13 28h1v1h-1zM16 28h1v1h-1zM18 28h5v1h-5zM24 28h1v1h-1zM27 28h1v1h-1z"/>
+              </svg></div>
               Versicherungen
+              <small>Wohnzimmer › Regal</small>
             </div>
           </div>
         </div>
