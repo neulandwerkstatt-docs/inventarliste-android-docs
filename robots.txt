@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neulandwerkstatt-docs.github.io/inventarliste-android-docs/sitemap.xml
